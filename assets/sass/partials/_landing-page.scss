@@ -1,0 +1,779 @@
+.weather-app {
+    padding: $large_padding * 1.5;
+
+    @media screen and (max-width: 768px) {
+        padding: $large_padding * 1.5;
+    }
+
+    @media screen and (max-width: 375px) {
+        padding: $medium_padding;
+    }
+    
+    .weather-app_content_landing-page {
+        display: block;
+
+        &.unactive {
+            display: none;
+        }
+
+        .top_information {
+
+            .presentation_info {
+                display: flex;
+                justify-content: space-between;
+
+
+                .title {
+                    max-width: 70%;
+
+                    font-size: $font_size_base * 2;
+                    font-weight: 600;
+
+                    @media screen and (max-width: 768px) {
+                        max-width: 70%;
+
+                        font-size: $font_size_base * 2;
+                    }
+                
+                    @media screen and (max-width: 375px) {
+                        max-width: 60%;
+
+                        font-size: $font_size_base * 1.5;
+                    }
+
+                    &.unactive {
+                       display: none;
+                    }
+                }
+
+                .back_home {
+                    display: none;
+
+                    &.active {
+                        display: block;
+                        font-size: $font_size_base * 1.25;
+
+                        margin-left: 0 auto;
+                        padding-bottom: $medium_padding;
+
+                        cursor: pointer;
+
+                        .bi-arrow-left {
+                            margin-right: $small_margin;
+
+                            font-size: $font_size_base * 1.5;
+
+                            @media screen and (max-width: 768px) {
+                                font-size: $font_size_base * 1.5;
+                            }
+                        
+                            @media screen and (max-width: 375px) {
+                                font-size: $font_size_base * 1.25;
+                            }
+                        }
+
+                        .go_back_text {
+                            font-size: $font_size_base * 1.5;
+
+                            @media screen and (max-width: 768px) {
+                                font-size: $font_size_base * 1.5;
+                            }
+                        
+                            @media screen and (max-width: 375px) {
+                                font-size: $font_size_base;
+                            }
+                        }
+                    }
+                }
+
+                .icons {
+                    display: flex;
+                    align-items: flex-start;
+
+                    &.unactive {
+                        display: none;
+                    }
+
+                    .info {
+
+                        .bi-info-circle {
+                            font-size: $font_size_base * 1.5;
+
+                            margin-left: $normal_margin;
+
+                            cursor: pointer;
+
+                            display: none;
+
+                            @media screen and (max-width: 768px) {
+                                font-size: $font_size_base * 1.5;
+
+                                margin-left: $medium_margin;
+                            }
+                        
+                            @media screen and (max-width: 375px) {
+                                font-size: $font_size_base * 1.25;
+
+                                margin-left: $normal_margin;
+                            }
+
+                            &.active {
+                                display: block;
+                            }
+                        }
+
+                        .bi-info-circle-fill {
+                            font-size: $font_size_base * 1.5;
+
+                            margin-left: $medium_margin;
+
+                            cursor: pointer;
+
+                            display: none;
+
+                            @media screen and (max-width: 768px) {
+                                font-size: $font_size_base * 1.5;
+
+                                margin-left: $medium_margin;
+                            }
+                        
+                            @media screen and (max-width: 375px) {
+                                font-size: $font_size_base * 1.25;
+
+                                margin-left: $normal_margin;
+                            }
+
+                            &.active {
+                                display: block;
+
+                                color: $secondary_color;
+                            }
+                        }
+                    }
+
+                    .share {
+
+                        .bi-share {
+                            font-size: $font_size_base * 1.5;
+
+                            margin-left: $medium_margin;
+
+                            cursor: pointer;
+
+                            display: none;
+
+                            @media screen and (max-width: 768px) {
+                                font-size: $font_size_base * 1.5;
+
+                                margin-left: $medium_margin;
+                            }
+                        
+                            @media screen and (max-width: 375px) {
+                                font-size: $font_size_base * 1.25;
+
+                                margin-left: $normal_margin;
+                            }
+
+                            &.active {
+                                display: block;
+                            }
+                        }
+
+                        .bi-share-fill {
+                            font-size: $font_size_base * 1.5;
+
+                            margin-left: $medium_margin;
+
+                            cursor: pointer;
+
+                            display: none;
+
+                            @media screen and (max-width: 768px) {
+                                font-size: $font_size_base * 1.5;
+
+                                margin-left: $medium_margin;
+                            }
+                        
+                            @media screen and (max-width: 375px) {
+                                font-size: $font_size_base * 1.25;
+
+                                margin-left: $normal_margin;
+                            }
+
+                            &.active {
+                                display: block;
+
+                                color: $secondary_color;
+                            }
+                        }
+                    }
+
+                    .save {
+
+                        .bi-plus-circle {
+                            font-size: $font_size_base * 1.5;
+
+                            margin-left: $medium_margin;
+
+                            cursor: pointer;
+
+                            display: none;
+
+                            @media screen and (max-width: 768px) {
+                                font-size: $font_size_base * 1.5;
+
+                                margin-left: $medium_margin;
+                            }
+                        
+                            @media screen and (max-width: 375px) {
+                                font-size: $font_size_base * 1.25;
+
+                                margin-left: $normal_margin;
+                            }
+
+                            &.active {
+                                display: block;
+                            }
+                        }
+
+                        .bi-plus-circle-fill {
+                            font-size: $font_size_base * 1.5;
+
+                            margin-left: $medium_margin;
+
+                            cursor: pointer;
+
+                            display: none;
+
+                            @media screen and (max-width: 768px) {
+                                font-size: $font_size_base * 1.5;
+
+                                margin-left: $medium_margin;
+                            }
+                        
+                            @media screen and (max-width: 375px) {
+                                font-size: $font_size_base * 1.25;
+
+                                margin-left: $normal_margin;
+                            }
+
+                            &.active {
+                                display: block;
+
+                                color: $secondary_color;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .weather_icon {
+                margin-top: $normal_margin;
+
+                &.unactive {
+                    display: none;
+                }
+            
+                span {
+                    font-size: $font_size_base * 16;
+
+                    @media screen and (max-width: 768px) {
+                        font-size: $font_size_base * 16;
+                    }
+                
+                    @media screen and (max-width: 375px) {
+                        font-size: $font_size_base * 10;
+                    }
+                }
+            }
+        }
+
+        .bottom_information {
+
+            &.unactive {
+                display: none;
+            }
+
+            .extra_info {
+                display: flex;
+                justify-content: space-between;
+
+                margin-bottom: $large_margin * 1.5;
+                padding-bottom: $medium_padding;
+
+                border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+
+                @media screen and (max-width: 768px) {
+                    margin-bottom: $large_margin * 1.5;
+                }
+            
+                @media screen and (max-width: 375px) {
+                    margin-bottom: $medium_margin;
+                }
+
+                .sunrise {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+
+                    @media screen and (max-width: 768px) {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                    }
+                
+                    @media screen and (max-width: 375px) {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+
+                        margin-right: $normal_margin;
+                    }
+
+                    span {
+                        font-size: $font_size_base * 1.75;
+
+                        @media screen and (max-width: 768px) {
+                            font-size: $font_size_base * 1.75;
+                        }
+                    
+                        @media screen and (max-width: 375px) {
+                            font-size: $font_size_base * 1.25;
+                        }
+                    }
+
+                    .sunrise_title {
+                        display: none;
+
+                        @media screen and (max-width: 768px) {
+                            display: block;
+
+                            font-size: $font_size_base * 1.25;
+                            font-weight: 300;
+                        }
+                    
+                        @media screen and (max-width: 375px) {
+                            display: none;
+                        }
+                    }
+
+                    .sunrise_info {
+                        margin-left: $small_margin;
+
+                        font-weight: 600;
+                        font-size: $font_size_base * 1.5;
+
+                        @media screen and (max-width: 768px) {
+                            margin-left: 0;
+
+                            font-size: $font_size_base * 1.5;
+                        }
+                    
+                        @media screen and (max-width: 375px) {
+                            margin-left: $small_margin;
+
+                            font-size: $font_size_base;
+                        }
+                    }
+                }
+
+                .sunset {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+
+                    @media screen and (max-width: 768px) {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                    }
+                
+                    @media screen and (max-width: 375px) {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+
+                        margin-right: $normal_margin;
+                    }
+
+                    span {
+                        font-size: $font_size_base * 1.75;
+
+                        @media screen and (max-width: 768px) {
+                            font-size: $font_size_base * 1.75;
+                        }
+                    
+                        @media screen and (max-width: 375px) {
+                            font-size: $font_size_base * 1.25;
+                        }
+                    }
+
+                    .sunset_title {
+                        display: none;
+
+                        @media screen and (max-width: 768px) {
+                            display: block;
+
+                            font-size: $font_size_base * 1.25;
+                            font-weight: 300;
+                        }
+                    
+                        @media screen and (max-width: 375px) {
+                            display: none;
+                        }
+                    }
+
+                    .sunset_info {
+                        margin-left: $small_margin;
+
+                        font-weight: 600;
+                        font-size: $font_size_base * 1.5;
+
+                        @media screen and (max-width: 768px) {
+                            margin-left: 0;
+
+                            font-size: $font_size_base * 1.5;
+                        }
+                    
+                        @media screen and (max-width: 375px) {
+                            margin-left: $small_margin;
+
+                            font-size: $font_size_base;
+                        }
+                    }
+                }
+
+                .pressure {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+
+                    @media screen and (max-width: 768px) {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                    }
+                
+                    @media screen and (max-width: 375px) {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                    }
+
+                    span {
+                        font-size: $font_size_base * 1.75;
+
+                        @media screen and (max-width: 768px) {
+                            font-size: $font_size_base * 1.75;
+                        }
+                    
+                        @media screen and (max-width: 375px) {
+                            font-size: $font_size_base * 1.25;
+                        }
+                    }
+
+                    .pressure_title {
+                        display: none;
+
+                        @media screen and (max-width: 768px) {
+                            display: block;
+
+                            font-size: $font_size_base * 1.25;
+                            font-weight: 300;
+                        }
+                    
+                        @media screen and (max-width: 375px) {
+                            display: none;
+                        }
+                    }
+
+                    .pressure_info {
+                        margin-left: $small_margin;
+
+                        font-weight: 600;
+                        font-size: $font_size_base * 1.5;
+
+                        @media screen and (max-width: 768px) {
+                            margin-left: 0;
+
+                            font-size: $font_size_base * 1.5;
+                        }
+                    
+                        @media screen and (max-width: 375px) {
+                            margin-left: $small_margin;
+
+                            font-size: $font_size_base;
+                        }
+                    }
+                }
+            }
+
+            .main_info {
+
+                .ground {
+                    display: flex;
+                    justify-content: space-between;
+
+                    margin-bottom: $large_margin;
+
+                    @media screen and (max-width: 768px) {
+                        margin-bottom: $large_margin;
+                    }
+                
+                    @media screen and (max-width: 375px) {
+                        margin-bottom: $medium_margin;
+                    }
+
+                    .main_ground_temperature_information {
+
+                        .title {
+                            font-size: $font_size_base * 1.25;
+
+                            @media screen and (max-width: 768px) {
+                                font-size: $font_size_base * 1.25;
+                            }
+                        
+                            @media screen and (max-width: 375px) {
+                                font-size: $font_size_base;
+                            }
+                        }
+
+                        .ground_temperature {
+                            font-size: $font_size_base * 3;
+                            font-weight: 600;
+
+                            @media screen and (max-width: 768px) {
+                                font-size: $font_size_base * 3;
+                            }
+                        
+                            @media screen and (max-width: 375px) {
+                                font-size: $font_size_base * 2;
+                            }
+                        }
+                    }
+
+                    .extra_ground_temperature_information {
+                        display: flex;
+
+                        .lower {
+                            padding-right: $medium_padding;
+
+                            .title_lower_temperature {
+                                font-size: $font_size_base * 1.25;
+                                display: flex;
+
+                                @media screen and (max-width: 768px) {
+                                    font-size: $font_size_base * 1.25;
+                                }
+                        
+                                @media screen and (max-width: 375px) {
+                                    font-size: $font_size_base;
+                                }
+
+                                span {
+                                    display: block;
+                                    font-size: $font_size_base * 1.25;
+
+                                    @media screen and (max-width: 768px) {
+                                        display: block;
+                                        font-size: $font_size_base * 1.25;
+                                    }
+                            
+                                    @media screen and (max-width: 375px) {
+                                        display: none;
+                                    }
+                                }
+                            }
+
+                            .lower_ground_temperature {
+                                font-weight: 600;
+                                font-size: $font_size_base * 1.5;
+
+                                @media screen and (max-width: 768px) {
+                                    font-size: $font_size_base * 1.5;
+                                }
+                        
+                                @media screen and (max-width: 375px) {
+                                    font-size: $font_size_base;
+                                }
+                            }
+                        }
+
+                        .higher {
+                            padding-left: $medium_padding;
+                            border-left: 1px solid rgba(255, 255, 255, 0.6);
+
+                            .title_higher_temperature {
+                                font-size: $font_size_base * 1.25;
+                                display: flex;
+
+                                @media screen and (max-width: 768px) {
+                                    font-size: $font_size_base * 1.25;
+                                }
+                        
+                                @media screen and (max-width: 375px) {
+                                    font-size: $font_size_base;
+                                }
+
+                                span {
+                                    display: block;
+                                    font-size: $font_size_base * 1.25;
+
+                                    @media screen and (max-width: 768px) {
+                                        display: block;
+                                        font-size: $font_size_base * 1.25;
+                                    }
+                            
+                                    @media screen and (max-width: 375px) {
+                                        display: none;
+                                    }
+                                }
+                            }
+
+                            .higher_ground_temperature {
+                                font-weight: 600;
+                                font-size: $font_size_base * 1.5;
+
+                                @media screen and (max-width: 768px) {
+                                    font-size: $font_size_base * 1.5;
+                                }
+                        
+                                @media screen and (max-width: 375px) {
+                                    font-size: $font_size_base;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .air {
+                    display: flex;
+                    justify-content: space-between;
+
+                    margin-bottom: $normal_margin;
+
+                    .main_air_temperature_information {
+
+                        .title {
+                            font-size: $font_size_base * 1.25;
+
+                            @media screen and (max-width: 768px) {
+                                font-size: $font_size_base * 1.25;
+                            }
+                        
+                            @media screen and (max-width: 375px) {
+                                font-size: $font_size_base;
+                            }
+                        }
+
+                        .air_temperature {
+                            font-size: $font_size_base * 3;
+                            font-weight: 600;
+
+                            @media screen and (max-width: 768px) {
+                                font-size: $font_size_base * 3;
+                            }
+                        
+                            @media screen and (max-width: 375px) {
+                                font-size: $font_size_base * 2;
+                            }
+                        }
+                    }
+
+                    .extra_air_temperature_information {
+                        display: flex;
+
+                        .lower {
+                            padding-right: $medium_padding;
+
+                            .title_lower_temperature {
+                                font-size: $font_size_base * 1.25;
+                                display: flex;
+
+                                @media screen and (max-width: 768px) {
+                                    font-size: $font_size_base * 1.25;
+                                }
+                        
+                                @media screen and (max-width: 375px) {
+                                    font-size: $font_size_base;
+                                }
+
+                                span {
+                                    display: block;
+                                    font-size: $font_size_base * 1.25;
+
+                                    @media screen and (max-width: 768px) {
+                                        display: block;
+                                        font-size: $font_size_base * 1.25;
+                                    }
+                            
+                                    @media screen and (max-width: 375px) {
+                                        display: none;
+                                    }
+                                }
+                            }
+
+                            .lower_air_temperature {
+                                font-weight: 600;
+                                font-size: $font_size_base * 1.5;
+
+                                @media screen and (max-width: 768px) {
+                                    font-size: $font_size_base * 1.5;
+                                }
+                        
+                                @media screen and (max-width: 375px) {
+                                    font-size: $font_size_base;
+                                }
+                            }
+                        }
+
+                        .higher {
+                            padding-left: $medium_padding;
+                            border-left: 1px solid rgba(255, 255, 255, 0.6);
+
+                            .title_higher_temperature {
+                                font-size: $font_size_base;
+                                display: flex;
+
+                                @media screen and (max-width: 768px) {
+                                    font-size: $font_size_base * 1.25;
+                                }
+                        
+                                @media screen and (max-width: 375px) {
+                                    font-size: $font_size_base;
+                                }
+
+                                span {
+                                    display: block;
+                                    font-size: $font_size_base * 1.25;
+
+                                    @media screen and (max-width: 768px) {
+                                        display: block;
+                                        font-size: $font_size_base * 1.25;
+                                    }
+                            
+                                    @media screen and (max-width: 375px) {
+                                        display: none;
+                                    }
+                                }
+                            }
+
+                            .higher_air_temperature {
+                                font-weight: 600;
+                                font-size: $font_size_base * 1.5;
+
+                                @media screen and (max-width: 768px) {
+                                    font-size: $font_size_base * 1.5;
+                                }
+                        
+                                @media screen and (max-width: 375px) {
+                                    font-size: $font_size_base;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

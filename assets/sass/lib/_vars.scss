@@ -1,0 +1,53 @@
+
+// TYPO
+$font_family_base: 'Source Sans Pro', 'Helvetica', Arial, sans_serif;
+$font_size_base: 16px;
+$font_weight_base: normal;
+$line_height_base: 1.4;
+
+
+
+
+// COLOR
+$body_color: #333;
+$body_bg: #fff;
+
+$secondary_color: #dadada;
+
+
+
+
+$text_muted: lighten($body_color, 15%);
+
+$link_color: $body_color;
+$link_hover_color: darken($body_color, 10%); 
+$link_decoration: none; 
+$link_hover_decoration: none;
+
+
+
+
+// SPACING
+$headings_margin_bottom: 1em; 
+$paragraph_margin_bottom: 1em;
+
+$small_padding: .5rem;
+$normal_padding: 1rem;
+$medium_padding: 1.5rem;
+$large_padding: 2rem;
+
+$small_margin: .5rem;
+$normal_margin: 1rem;
+$medium_margin: 1.5rem;
+$large_margin: 2rem;
+
+
+
+
+
+
+
+
+
+$dt_font_weight: bold; 
+$table_cell_padding: .5em; 

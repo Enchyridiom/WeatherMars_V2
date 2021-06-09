@@ -1,0 +1,158 @@
+.weather-app_content_my-list {
+    display: none;
+
+    &.active {
+        display: block;
+
+        .top_information_my-list {
+            display: flex;
+            justify-content: space-between;
+    
+            margin-bottom: $large_margin;
+    
+            .title {
+                max-width: 60%;
+    
+                font-size: $font_size_base * 2;
+                font-weight: 600;
+
+                @media screen and (max-width: 768px) {
+                    font-size: $font_size_base * 2;
+                }
+        
+                @media screen and (max-width: 375px) {
+                    font-size: $font_size_base * 1.25;
+                }
+            }
+
+            button {
+                outline: none;
+
+                border: 1px solid white;
+                border-radius: 4px;
+                background-color: rgba(255, 255, 255, 0.1);
+
+                font-size: $font_size_base * 1.25;
+                font-weight: 600;
+                color: white;
+
+                padding: $small_padding $normal_padding;
+
+                cursor: pointer;
+
+                @media screen and (max-width: 768px) {
+                    font-size: $font_size_base * 1.25;
+
+                    padding: $small_padding $normal_padding;
+                }
+        
+                @media screen and (max-width: 375px) {
+                    font-size: $font_size_base;
+
+                    padding: .25rem $normal_padding;
+                }
+            }
+        }
+    
+        .bottom_information_my-list {
+            display: grid;
+            grid-template-rows: auto;
+            grid-gap: 1rem;
+    
+            // COMPONENTE CARD
+            .save_card {
+                background: rgba(255, 255, 255, 0.2);
+                border-radius: 4px;
+    
+                padding: $normal_padding;
+
+                display: flex;
+                justify-content: space-between;
+
+                @media screen and (max-width: 768px) {
+                    padding: $normal_padding;
+                }
+        
+                @media screen and (max-width: 375px) {
+                    padding: $small_padding;
+                }
+
+                .card_information {
+                    display: flex;
+                    justify-content: space-between;
+
+                    cursor: pointer;
+
+                    .weather_icon {
+                        margin-right: $large_margin * 1.5;
+
+                        @media screen and (max-width: 768px) {
+                            margin-right: $large_margin * 1.5;
+                        }
+                
+                        @media screen and (max-width: 375px) {
+                            margin-right: $normal_margin;
+                        }
+    
+                        span {
+                            font-size: $font_size_base * 4;
+
+                            @media screen and (max-width: 768px) {
+                                font-size: $font_size_base * 4;
+                            }
+                    
+                            @media screen and (max-width: 375px) {
+                                font-size: $font_size_base * 4;
+                            }
+                        }
+                    }
+
+                    .info {
+                        display: flex;
+                        flex-direction: column;
+
+                        .title {
+                            font-size: $font_size_base * 1.25;
+                            font-weight: 600;
+    
+                            margin-bottom: $normal_margin;
+                        }
+    
+                        .main_information {
+                            display: flex;
+                            justify-content: space-between;
+            
+                            .ground {
+            
+                                .ground_title {}
+                                
+                                .ground_information {
+                                    font-weight: 600;
+                                }
+                            }
+            
+                            .air {
+                                padding-left: $medium_padding;
+                                border-left: 1px solid rgba(255, 255, 255, 0.6);
+            
+                                .air_title {}
+            
+                                .air_information {
+                                    font-weight: 600;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .trash {
+                    color: lighten($secondary_color, 8);
+
+                    margin-left: $large_margin * 1.5;
+
+                    span {}
+                }
+            }
+        }
+    }
+}

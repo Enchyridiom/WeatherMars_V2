@@ -1,0 +1,164 @@
+.menu_bg {
+    position: fixed;
+    bottom:0;
+    left: 0;
+    width: 100%;
+
+    padding: $large_padding;
+
+    background: rgb(49, 49, 49);
+    
+    z-index: 99;
+
+    @media screen and (max-width: 768px) {
+        padding: $large_padding;
+    }
+
+    @media screen and (max-width: 375px) {
+        padding: $normal_padding;
+    }
+
+    .menu {
+    
+        .menu_content {
+            display: flex;
+            justify-content: space-between;
+    
+            padding: $normal_padding $medium_padding;
+    
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 4px;
+
+            @media screen and (max-width: 768px) {
+                padding: $normal_padding $medium_padding;
+            }
+        
+            @media screen and (max-width: 375px) {
+                padding: $small_padding $normal_padding;
+            }
+    
+            .exit {
+                display: flex;
+                align-items: center;
+    
+                cursor: pointer;
+    
+                &.active {
+                    color: $secondary_color;
+                }
+    
+                .bi-box-arrow-left {
+                    font-size: $font_size_base * 1.75;
+
+                    @media screen and (max-width: 768px) {
+                        font-size: $font_size_base * 1.75;
+                    }
+                
+                    @media screen and (max-width: 375px) {
+                        font-size: $font_size_base * 1.25;
+                    }
+                }
+    
+                .exit_text {
+                    margin-left: $small_margin;
+    
+                    display: none;
+    
+                    &.active {
+                        display: block;
+                    }
+                }
+            }
+    
+            .home {
+                display: flex;
+                align-items: center;
+    
+                cursor: pointer;
+    
+                &.active {
+                    color: $secondary_color;
+                }
+    
+                .bi-house-door-fill {
+                    font-size: $font_size_base * 1.75;
+
+                    @media screen and (max-width: 768px) {
+                        font-size: $font_size_base * 1.75;
+                    }
+                
+                    @media screen and (max-width: 375px) {
+                        font-size: $font_size_base * 1.25;
+                    }
+                }
+    
+                .home_text {
+                    margin-left: $normal_margin;
+
+                    font-size: $font_size_base * 1.25;
+    
+                    display: none;
+
+                    @media screen and (max-width: 768px) {
+                        font-size: $font_size_base * 1.25;
+
+                        margin-left: $normal_margin;
+                    }
+                
+                    @media screen and (max-width: 375px) {
+                        font-size: $font_size_base;
+                    }
+    
+                    &.active {
+                        display: block;
+                    }
+                }
+            }
+    
+            .list {
+                display: flex;
+                align-items: center;
+    
+                cursor: pointer;
+    
+                &.active {
+                    color: $secondary_color;
+                }
+    
+                .bi-bookmarks-fill {
+                    font-size: $font_size_base * 1.75;
+
+                    @media screen and (max-width: 768px) {
+                        font-size: $font_size_base * 1.75;
+                    }
+                
+                    @media screen and (max-width: 375px) {
+                        font-size: $font_size_base * 1.25;
+                    }
+                }
+    
+                .list_text {
+                    margin-left: $normal_margin;
+
+                    font-size: $font_size_base * 1.25;
+    
+                    display: none;
+
+                    @media screen and (max-width: 768px) {
+                        font-size: $font_size_base * 1.25;
+
+                        margin-left: $normal_margin;
+                    }
+                
+                    @media screen and (max-width: 375px) {
+                        font-size: $font_size_base;
+                    }
+    
+                    &.active {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}

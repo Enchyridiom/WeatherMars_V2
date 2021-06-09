@@ -1,0 +1,380 @@
+.share_submenu {
+    display: none;
+
+    &.active {
+        position: absolute;
+        left: 0;
+
+        display: block;
+
+        width: 100%;
+        height: calc(100% - 11.45%);
+
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 4px 4px 0px 0px;
+
+        padding: $medium_padding;
+        margin: 0 auto;
+
+        .share_content {
+            max-width: 40%;
+
+            margin: 0 auto;
+            padding: $medium_padding;
+            
+            border-radius: 4px;
+
+            background-color: rgba(255, 255, 255, 0.2);
+
+            @media screen and (max-width: 768px) {
+                max-width: 70%;
+            }
+    
+            @media screen and (max-width: 375px) {
+                max-width: 90%;
+            }
+
+            .title {
+                font-size: $font_size_base * 2;
+                font-weight: 600;
+
+                text-align: center;
+
+                @media screen and (max-width: 768px) {
+                    font-size: $font_size_base * 2;
+                }
+        
+                @media screen and (max-width: 375px) {
+                    font-size: $font_size_base * 1.25;
+                }
+            }
+    
+            .icon {
+                margin: $large_margin 0;
+
+                @media screen and (max-width: 768px) {
+                    margin: $large_margin 0;
+                }
+        
+                @media screen and (max-width: 375px) {
+                    margin: $normal_margin 0;
+                }
+    
+                span {
+                    font-size: $font_size_base * 10;
+
+                    display: flex;
+                    justify-content: center;
+
+                    @media screen and (max-width: 768px) {
+                        font-size: $font_size_base * 10;
+                    }
+            
+                    @media screen and (max-width: 375px) {
+                        font-size: $font_size_base * 5;
+                    }
+                }
+            }
+    
+            .info {
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+    
+                .ground_temperature {
+                    padding-right: $large_padding * 3;
+                    border-right: 1px solid rgba(255, 255, 255, 0.6);
+
+                    @media screen and (max-width: 768px) {
+                        padding-right: $large_padding * 3;
+                    }
+            
+                    @media screen and (max-width: 375px) {
+                        padding-right: $large_padding * 1.5;
+                    }
+    
+                    .ground_title {
+                        font-size: $font_size_base * 1.25;
+
+                        @media screen and (max-width: 768px) {
+                            font-size: $font_size_base * 1.25;
+                        }
+                
+                        @media screen and (max-width: 375px) {
+                            font-size: $font_size_base;
+                        }
+                    }
+    
+                    .ground_info {
+                        font-size: $font_size_base * 2;
+                        font-weight: 600;
+
+                        @media screen and (max-width: 768px) {
+                            font-size: $font_size_base * 2;
+                        }
+                
+                        @media screen and (max-width: 375px) {
+                            font-size: $font_size_base * 1.5;
+                        }
+                    }
+                }
+    
+                .air_temperature {
+    
+                    .air_title {
+                        font-size: $font_size_base * 1.25;
+
+                        @media screen and (max-width: 768px) {
+                            font-size: $font_size_base * 1.25;
+                        }
+                
+                        @media screen and (max-width: 375px) {
+                            font-size: $font_size_base;
+                        }
+                    }
+    
+                    .air_info {
+                        font-size: $font_size_base * 2;
+                        font-weight: 600;
+
+                        @media screen and (max-width: 768px) {
+                            font-size: $font_size_base * 2;
+                        }
+                
+                        @media screen and (max-width: 375px) {
+                            font-size: $font_size_base * 1.5;
+                        }
+                    }
+                }
+            }
+        }
+    
+        .rrss {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-gap: 2.5rem;
+
+            margin-top: $large_margin * 1.25;
+
+            @media screen and (max-width: 768px) {
+                grid-gap: 2.5rem;
+
+                margin-top: $large_margin * 1.25;
+            }
+    
+            @media screen and (max-width: 375px) {
+                grid-gap: 1.5rem;
+
+                margin-top: $medium_margin;
+            }
+
+            .rrss_title {
+                grid-area: 1 / 1 / 2 / 7;
+
+                margin: 0 auto;
+
+                font-size: $font_size_base * 1.5;
+
+                @media screen and (max-width: 768px) {
+                    font-size: $font_size_base * 1.5;
+                }
+        
+                @media screen and (max-width: 375px) {
+                    font-size: $font_size_base * 1.25;
+                }
+            }
+    
+            .whatsapp {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+
+                cursor: pointer;
+    
+                .bi-whatsapp {
+                    font-size: $font_size_base * 2.5;
+
+                    @media screen and (max-width: 768px) {
+                        font-size: $font_size_base * 2.5;
+                    }
+            
+                    @media screen and (max-width: 375px) {
+                        font-size: $font_size_base * 1.25;
+                    }
+                }
+    
+                .whatsapp_text {
+                    font-size: $font_size_base * 1.25;
+
+                    @media screen and (max-width: 768px) {
+                        font-size: $font_size_base * 1.25;
+                    }
+            
+                    @media screen and (max-width: 375px) {
+                        font-size: $font_size_base;
+                    }
+                }
+            }
+    
+            .instagram {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+
+                cursor: pointer;
+    
+                .bi-instagram {
+                    font-size: $font_size_base * 2.5;
+
+                    @media screen and (max-width: 768px) {
+                        font-size: $font_size_base * 2.5;
+                    }
+            
+                    @media screen and (max-width: 375px) {
+                        font-size: $font_size_base * 1.25;
+                    }
+                }
+    
+                .instagram_text {
+                    font-size: $font_size_base * 1.25;
+
+                    @media screen and (max-width: 768px) {
+                        font-size: $font_size_base * 1.25;
+                    }
+            
+                    @media screen and (max-width: 375px) {
+                        font-size: $font_size_base;
+                    }
+                }
+            }
+    
+            .facebook {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+
+                cursor: pointer;
+    
+                .bi-facebook {
+                    font-size: $font_size_base * 2.5;
+
+                    @media screen and (max-width: 768px) {
+                        font-size: $font_size_base * 2.5;
+                    }
+            
+                    @media screen and (max-width: 375px) {
+                        font-size: $font_size_base * 1.25;
+                    }
+                }
+    
+                .facebook_text {
+                    font-size: $font_size_base * 1.25;
+
+                    @media screen and (max-width: 768px) {
+                        font-size: $font_size_base * 1.25;
+                    }
+            
+                    @media screen and (max-width: 375px) {
+                        font-size: $font_size_base;
+                    }
+                }
+            }
+    
+            .twitter {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+
+                cursor: pointer;
+    
+                .bi-twitter {
+                    font-size: $font_size_base * 2.5;
+
+                    @media screen and (max-width: 768px) {
+                        font-size: $font_size_base * 2.5;
+                    }
+            
+                    @media screen and (max-width: 375px) {
+                        font-size: $font_size_base * 1.25;
+                    }
+                }
+    
+                .twitter_text {
+                    font-size: $font_size_base * 1.25;
+
+                    @media screen and (max-width: 768px) {
+                        font-size: $font_size_base * 1.25;
+                    }
+            
+                    @media screen and (max-width: 375px) {
+                        font-size: $font_size_base;
+                    }
+                }
+            }
+
+            .google {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+
+                cursor: pointer;
+    
+                .bi-google {
+                    font-size: $font_size_base * 2.5;
+
+                    @media screen and (max-width: 768px) {
+                        font-size: $font_size_base * 2.5;
+                    }
+            
+                    @media screen and (max-width: 375px) {
+                        font-size: $font_size_base * 1.25;
+                    }
+                }
+    
+                .google_text {
+                    font-size: $font_size_base * 1.25;
+
+                    @media screen and (max-width: 768px) {
+                        font-size: $font_size_base * 1.25;
+                    }
+            
+                    @media screen and (max-width: 375px) {
+                        font-size: $font_size_base;
+                    }
+                }
+            }
+    
+            .sms {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+
+                cursor: pointer;
+    
+                .bi-chat-left-text {
+                    font-size: $font_size_base * 2.5;
+
+                    @media screen and (max-width: 768px) {
+                        font-size: $font_size_base * 2.5;
+                    }
+            
+                    @media screen and (max-width: 375px) {
+                        font-size: $font_size_base * 1.25;
+                    }
+                }
+    
+                .sms_text {
+                    font-size: $font_size_base * 1.25;
+
+                    @media screen and (max-width: 768px) {
+                        font-size: $font_size_base * 1.25;
+                    }
+            
+                    @media screen and (max-width: 375px) {
+                        font-size: $font_size_base;
+                    }
+                }
+            }
+        }
+    }
+}
